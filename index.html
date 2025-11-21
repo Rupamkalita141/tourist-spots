@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Tourist Spots | Explore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="./images/logo.png" alt="Travel Globe Logo">
+                <h1>Global Explorer</h1>
+            </div>
+            <nav>
+                <a href="#tourist-spots-container">Destinations</a>
+                <a href="#contribute-section">Contribute</a>
+                <a href="#">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="tourist-spots-container">
+        <section class="spot-card" data-spot="himalayas">
+            <h2>The Himalayas</h2>
+            <p class="location">Asia</p>
+            <img src="./images/sunset-hill.jpg" alt="Snowy peaks of the Himalayas">
+            <p>The world's highest mountains, offering breathtaking views, challenging treks, and serene monasteries. A true adventure destination.</p>
+            <button class="details-button">Show Details</button>
+            <div class="hidden-details">
+                <p><strong>Best Time to Visit:</strong> March to May or September to November.</p>
+                <p><strong>Key Attraction:</strong> Mount Everest Base Camp Trek.</p>
+                <p><strong>Required Gear:</strong> Thermal wear, sturdy hiking boots.</p>
+            </div>
+        </section>
+
+        <section class="spot-card" data-spot="reef">
+            <h2>Great Barrier Reef</h2>
+            <p class="location">Australia</p>
+            <img src="./images/old-fort.jpg" alt="Underwater view of coral and fish">
+            <p>The world's largest coral reef system, home to diverse marine life. Perfect for snorkeling, diving, and boat tours.</p>
+            <button class="details-button">Show Details</button>
+            <div class="hidden-details">
+                <p><strong>Best Time to Visit:</strong> June to October (dry season).</p>
+                <p><strong>Key Attraction:</strong> Scuba diving amongst the colorful coral.</p>
+                <p><strong>Required Gear:</strong> Sunscreen (reef safe), dive mask.</p>
+            </div>
+        </section>
+
+        <section class="spot-card" data-spot="machu-picchu">
+            <h2>Machu Picchu</h2>
+            <p class="location">Peru, South America</p>
+            <img src="./images/blue-lake.jpg" alt="Machu Picchu ancient ruins">
+            <p>An ancient Incan citadel set high in the Andes Mountains. A UNESCO World Heritage site and a testament to Incan engineering.</p>
+            <button class="details-button">Show Details</button>
+            <div class="hidden-details">
+                <p><strong>Best Time to Visit:</strong> April to October (dry season).</p>
+                <p><strong>Key Attraction:</strong> The classic Inca Trail hike.</p>
+                <p><strong>Required Gear:</strong> Altitude sickness medication, layered clothing.</p>
+            </div>
+        </section>
+
+        <section id="contribute-section" class="spot-card contribute-card">
+            <h2>Share Your Favorite Spot!</h2>
+            <p>Help us grow our collection. Use the form below to submit details about a tourist spot you love.</p>
+            <form id="add-place-form">
+                <input type="text" placeholder="Place Name" required>
+                <input type="text" placeholder="Location (e.g., Country, Continent)" required>
+                <textarea placeholder="Brief Description" required></textarea>
+                <input type="url" placeholder="Image URL (Optional)">
+                <button type="submit" class="submit-button">Submit Place</button>
+            </form>
+            <p class="note">Note: Submission is for demonstration only in this static version.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section quick-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#tourist-spots-container">Our Destinations</a></li>
+                    <li><a href="#contribute-section">Submit a Spot</a></li>
+                    <li><a href="#">Travel Blog (Placeholder)</a></li>
+                    <li><a href="#">FAQ (Placeholder)</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-info">
+                <h4>Get in Touch</h4>
+                <p>Email: info@globalexplorer.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">📷 Instagram</a>
+                    <a href="#" class="social-icon">📘 Facebook</a>
+                </div>
+            </div>
+            <div class="footer-section legal">
+                <h4>Legal</h4>
+                <p><a href="#">Privacy Policy (Placeholder)</a></p>
+                <p><a href="#">Terms of Use (Placeholder)</a></p>
+                <p class="assignment-note">This site is a static project for the Cloud Computing and Virtualization Assignment (23BCAO312R).</p>
+            </div>
+        </div>
+        <div class="copyright-bar">
+            &copy; 2025 Global Explorer. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

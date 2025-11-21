@@ -1,0 +1,285 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5; /* Lighter background */
+    color: #333;
+    padding-top: 70px; /* Space for fixed header */
+}
+
+/* --- Header Styling (Fixed and Responsive) --- */
+header {
+    background-color: #172a3a; /* Dark Navy Blue */
+    color: white;
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.logo h1 {
+    font-size: 1.8em;
+    font-weight: 300;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #4dc2ff; /* Light blue highlight */
+}
+
+/* --- Main Content Layout --- */
+#tourist-spots-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Card Styling (Existing styling improved) */
+.spot-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid #4dc2ff; /* Light Blue Accent */
+}
+
+.spot-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.spot-card h2 {
+    color: #172a3a;
+    margin-bottom: 8px;
+    font-size: 1.6em;
+}
+
+.spot-card .location {
+    font-style: italic;
+    color: #6c757d;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.spot-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Ensures images look good */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* --- Contribution Card Styling --- */
+.contribute-card {
+    border-top: 5px solid #ffc107; /* Yellow Accent */
+    text-align: center;
+}
+
+.contribute-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contribute-card input[type="text"],
+.contribute-card input[type="url"],
+.contribute-card textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.submit-button {
+    background-color: #ffc107; /* Yellow */
+    color: #172a3a;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #e0a800; /* Darker Yellow */
+}
+
+.note {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+/* Button and Hidden Details (retained logic) */
+.details-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.details-button:hover {
+    background-color: #218838;
+}
+
+.hidden-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    background-color: #e9ecef;
+    padding: 0 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.hidden-details.show {
+    max-height: 300px;
+    padding: 15px;
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #34495e; /* Darker background for contrast */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.copyright {
+    margin-top: 10px;
+    color: #ccc;
+} */
+/* ... (All previous CSS for header, main, and cards remains the same) ... */
+/* ... (All previous CSS for header, main, and cards remains the same) ... */
+
+/* --- Footer Styling (Detailed Multi-Column) --- */
+footer {
+    background-color: #34495e; /* Darker background for contrast */
+    color: white;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    display: flex; /* Enable flexbox for columns */
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+    border-bottom: 1px solid #4a6885; /* Separator for copyright bar */
+}
+
+.footer-section {
+    width: 30%; /* Approx. width for three columns */
+    min-width: 200px; /* Ensures columns don't get too narrow */
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-size: 1.1em;
+    color: #4dc2ff; /* Light blue accent */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #4dc2ff;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.assignment-note {
+    margin-top: 15px;
+    font-size: 0.85em;
+    line-height: 1.4;
+    color: #a0aec0;
+}
+
+.copyright-bar {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #2c3e50; /* Slightly darker shade for the bar */
+    font-size: 0.8em;
+    color: #ccc;
+}
